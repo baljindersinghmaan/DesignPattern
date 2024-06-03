@@ -7,6 +7,7 @@ fun main(){
         bikeToBuild.build()
     } catch (e: Exception) {
         println(errorText)
+
     }
 
 }
