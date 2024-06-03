@@ -1,14 +1,8 @@
 package com.example.systemdesign
 
 fun main(){
-    val bicycleFactory = SimpleBicycleFactory()
-    try {
-        val bikeToBuild = bicycleFactory.createBicycle("Motion")
-        bikeToBuild.build()
-    } catch (e: Exception) {
-        println(errorText)
-
-    }
+    val alpineCreator = AlpineCreator()
+    alpineCreator.createProduct("palo duro canyon ranger").build()
 
 }
 class Main {

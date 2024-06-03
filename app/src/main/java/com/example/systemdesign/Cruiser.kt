@@ -4,9 +4,15 @@ import com.example.systemdesign.enums.BicycleGeometries
 import com.example.systemdesign.enums.BicyclePaintColors
 import com.example.systemdesign.enums.SuspensionTypes
 
-class Cruiser : Bicycle (
+class Cruiser(
+    override var geometry: BicycleGeometries,
+    override var color: BicyclePaintColors,
+    override var suspension: SuspensionTypes
+) : Bicycle (
     modelName = "Galven Cruiser",
-    suspension = SuspensionTypes.Hardtail,
-    color = BicyclePaintColors.Red,
-    geometry = BicycleGeometries.Upright
-)
+
+) {
+    override fun build() {
+        TODO("Not yet implemented")
+    }
+}

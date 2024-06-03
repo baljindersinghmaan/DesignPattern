@@ -4,9 +4,15 @@ import com.example.systemdesign.enums.BicycleGeometries
 import com.example.systemdesign.enums.BicyclePaintColors
 import com.example.systemdesign.enums.SuspensionTypes
 
-class Recumbent: Bicycle(
+class Recumbent(
+    override var geometry: BicycleGeometries,
+    override var color: BicyclePaintColors,
+    override var suspension: SuspensionTypes
+) : Bicycle(
     modelName = "Big Bend",
-    suspension = SuspensionTypes.Front,
-    color = BicyclePaintColors.White,
-    geometry = BicycleGeometries.Recumbent
-)
+
+) {
+    override fun build() {
+        print("Building recumbent bike")
+    }
+}

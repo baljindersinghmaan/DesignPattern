@@ -7,9 +7,14 @@ import com.example.systemdesign.enums.SuspensionTypes
 import java.time.LocalDate
 import java.util.UUID
 
-class RoadBike : Bicycle(
+class RoadBike(
+    override var geometry: BicycleGeometries,
+    override var color: BicyclePaintColors,
+    override var suspension: SuspensionTypes
+) : Bicycle(
     modelName = "Hillcrest",
-    color = BicyclePaintColors.Blue,
-    geometry = BicycleGeometries.Upright,
-    suspension = SuspensionTypes.Hardtail,
-)
+) {
+    override fun build() {
+        println("Building road bike")
+    }
+}

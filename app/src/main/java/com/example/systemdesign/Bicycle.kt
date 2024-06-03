@@ -10,15 +10,16 @@ import java.time.LocalDate
 import java.time.Year
 import java.util.UUID
 
-abstract class Bicycle constructor(
-    protected val modelName: String = "",
-    private var year: Int = LocalDate.now().year,
-    private val serialNumber: String = UUID.randomUUID().toString(),
-    protected val color: BicyclePaintColors,
-    protected val geometry: BicycleGeometries,
-    protected val suspension: SuspensionTypes
-) {
-    private var buildStatus: ManufacturingStatus? = null
+import java.util.*
 
-    // You can add getter and setter methods or any other methods you need
+ abstract class Bicycle constructor(
+  override var modelName: String = "",
+  override var year: Int = LocalDate.now().year,
+  override var serialNumber: String = UUID.randomUUID().toString(),
+  override var buildStatus: ManufacturingStatus = ManufacturingStatus.Specified
+ ) : IBicycle {
+  // Properties with default initial values
+
+
 }
+
