@@ -1,8 +1,22 @@
 package com.example.systemdesign
 
+import com.example.systemdesign.builder.Director
+import com.example.systemdesign.builder.RoadBikeBuilder
+
 fun main(){
-    val alpineCreator = AlpineCreator()
-    alpineCreator.createProduct("palo duro canyon ranger").build()
+    val roadBikeBuilder = RoadBikeBuilder()
+    val director = Director(roadBikeBuilder)
+
+    val roadBike = director.make()
+    println(roadBike.toString())
+
+// Want a mountain bike instead? No problem!
+   /* val mountainBikeBuilder = MountainBikeBuilder()
+    director.changeBuilder(mountainBikeBuilder)
+
+    val mountainBike = director.make()
+    println(mountainBike.toString())*/
+
 
 }
 class Main {
