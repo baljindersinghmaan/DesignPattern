@@ -12,7 +12,7 @@ import java.util.UUID
 
 import java.util.*
 
- abstract class Bicycle constructor(
+ abstract class Bicycle (
   override var modelName: String = "",
   override var year: Int = LocalDate.now().year,
   override var serialNumber: String = UUID.randomUUID().toString(),
