@@ -1,3 +1,13 @@
+## Switch Branches to Learn Different Patterns
+
+To explore different design patterns, switch branches in this repository:
+
+- `builder-pattern`: Example of the Builder pattern
+- `factory-pattern`: Example of the Factory pattern
+- `abstract-factory-pattern`: Example of the Abstract Factory pattern
+- `singleton-pattern`: Example of the Singleton pattern 
+
+
 # Simple Bicycle Factory Example Repository
 
 This repository contains an example implementation of the Simple Factory design pattern in Kotlin. The code demonstrates how to create bicycles using the Simple Factory pattern.
