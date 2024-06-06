@@ -5,32 +5,23 @@ import com.example.systemdesign.builder.RoadBikeBuilder
 import com.example.systemdesign.objectpool.WeldingArmPool
 
 fun main(){
-    println("Here's a program that controls some welding robots from a pool of 10.")
+    println("Here's a program that controls some welding robots from a pool of 10")
+    println("This one uses a singleton version of the object pool making it impossible to instantiate more than once.")
 
-    val armPool = WeldingArmPool().apply {
-        maxSize = 10
-    }
+    // note the new keyword doesn't work by design.  uncomment the following line if you don't believe me.
+    // var armPoolSingleton = WeldingArmPoolSingleton()
 
-    // That's it! We now have a pool of ten arms. (basically a squid)
+    // instead you need the static instance property.  it's getter handles the singleton instance for you.
+    val armPoolSingleton = WeldingArmPoolSingleton.instanceSingleton
 
-    // Let's take one out and send it to station
-
-    val arm01 = armPool.getArmFromPool()
+    val arm01 = armPoolSingleton.getArmFromPool()
     arm01.moveToStation(1)
-    if (arm01.doWeld()) armPool.returnArmToPool(arm01)
+    if (arm01.doWeld()) armPoolSingleton.returnArmToPool(arm01)
 
-    println("There are ${armPool.armsAvailable} arms available")
+    println("There are ${armPoolSingleton.armsAvailable} arms available")
 
+    // now try it again.  it's pointing to the same single instance.  if it weren't there would be 10.
 
-    for (i in 0 until 11) {
-        try {
-            val arm = armPool.getArmFromPool()
-            arm.moveToStation(i + 1)
-            arm.doWeld()
-            println("There are ${armPool.armsAvailable} arms available")
-            // Fail to send it back so we run out of arms
-        } catch (ex: Exception) {
-            println(ex.message)
-        }
-    }
+    val armPoolSingleton2 = WeldingArmPoolSingleton.instanceSingleton
+    println("There are ${armPoolSingleton2.armsAvailable} arms available")
 }
