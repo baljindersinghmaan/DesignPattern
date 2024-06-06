@@ -5,7 +5,16 @@ To explore different design patterns, switch branches in this repository:
 - `builder-pattern`: Example of the Builder pattern
 - `factory-pattern`: Example of the Factory pattern
 - `abstract-factory-pattern`: Example of the Abstract Factory pattern
-- `singleton-pattern`: Example of the Singleton pattern 
+- `singleton-pattern`: Example of the Singleton pattern
+
+## Builder Pattern
+
+“The Builder pattern is used when you need to make objects using a complex set of steps. Using it is similar to the Abstract Factory pattern, but your builder classes are defined by an interface. Each method in the builder represents a step of the build process. It might be tempting to put a single method in each builder class to call the steps in order. However, this is usually delegated to a Director class. The builder houses the methods to build the object, but the Director class contains the logic behind the order in which those methods are called.”
+
+Excerpt From
+Real-World Implementation of C# Design Patterns
+Bruce M. Van Horn II
+This material may be protected by copyright.
 
 # Builder Pattern Example Repository
 
@@ -35,14 +44,6 @@ To run the code:
 2. Navigate to the `src` directory.
 3. Run the `Main.kt` file.
 
-## Builder Pattern
-
-“The Builder pattern is used when you need to make objects using a complex set of steps. Using it is similar to the Abstract Factory pattern, but your builder classes are defined by an interface. Each method in the builder represents a step of the build process. It might be tempting to put a single method in each builder class to call the steps in order. However, this is usually delegated to a Director class. The builder houses the methods to build the object, but the Director class contains the logic behind the order in which those methods are called.”
-
-Excerpt From
-Real-World Implementation of C# Design Patterns
-Bruce M. Van Horn II
-This material may be protected by copyright.
 
 In this example, the `RoadBikeBuilder` class serves as a builder for constructing road bikes. It allows users to specify the components and features of the road bike, such as frame type, wheel size, and gear set, independently of the construction process, resulting in a flexible and customizable object creation process.
 
