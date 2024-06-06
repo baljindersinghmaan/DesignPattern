@@ -1,3 +1,12 @@
+## Switch Branches to Learn Different Patterns
+
+To explore different design patterns, switch branches in this repository:
+
+- `builder-pattern`: Example of the Builder pattern
+- `factory-pattern`: Example of the Factory pattern
+- `abstract-factory-pattern`: Example of the Abstract Factory pattern
+- `singleton-pattern`: Example of the Singleton pattern 
+
 # Builder Pattern Example Repository
 
 This repository contains an example implementation of the Builder design pattern in Kotlin. The code demonstrates how to construct complex objects using the Builder pattern with a `RoadBikeBuilder`.
