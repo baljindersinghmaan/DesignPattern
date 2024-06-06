@@ -1,5 +1,11 @@
 # Object Pool Example Repository
+Imagine you have a limited resource that takes time to create, like a database connection, threads, or complex objects. Creating and destroying these resources frequently can be inefficient.
 
+An object pool is like a container that holds a pre-initialized set of these resources. Instead of creating new resources every time you need one, you borrow one from the pool. After you're done using it, you return it to the pool for reuse by someone else.
+
+Think of it like having a collection of ready-to-use items at your disposal. When you need one, you grab it from the collection. When you're done, you put it back in the collection for someone else to use.
+
+This approach saves time and resources because creating and destroying objects is expensive, but reusing them from a pool is much faster and more efficient.
 This repository contains an example implementation of the Object Pool design pattern in Kotlin. The code demonstrates how to manage a pool of welding arms effectively using the Object Pool pattern.
 
 ## Usage
