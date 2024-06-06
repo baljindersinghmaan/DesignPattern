@@ -8,7 +8,7 @@ To explore different design patterns, switch branches in this repository:
 - `singleton-pattern`: Example of the Singleton pattern 
 
 
-# Simple Bicycle Factory Example Repository
+# Simple Factory Example Repository
 
 This repository contains an example implementation of the Simple Factory design pattern in Kotlin. The code demonstrates how to create bicycles using the Simple Factory pattern.
 
@@ -45,4 +45,4 @@ To run the code:
 
 ## Contribution
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or create a pull request.
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to create a pull request.
