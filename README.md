@@ -1,3 +1,12 @@
+## Switch Branches to Learn Different Patterns
+
+To explore different design patterns, switch branches in this repository:
+
+- `builder-pattern`: Example of the Builder pattern
+- `factory-pattern`: Example of the Factory pattern
+- `abstract-factory-pattern`: Example of the Abstract Factory pattern
+- `singleton-pattern`: Example of the Singleton pattern 
+
 # Object Pool Example Repository
 Imagine you have a limited resource that takes time to create, like a database connection, threads, or complex objects. Creating and destroying these resources frequently can be inefficient.
 
